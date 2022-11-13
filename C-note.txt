@@ -1,0 +1,65 @@
+class A{
+protected int x, y;
+
+public virtual void display(){
+Console. WriteLine("C1ass A: function display is called! ");
+}
+}
+
+class B : A{
+
+public virtual void display(){
+Console. WriteLine("C1ass B: function display is called!);
+}
+
+public void getX(){}
+
+public void get(){}
+
+class C:B{
+public override void display(){
+	Console.WriteLine("Class C:function is called");
+}
+public void show(){
+	Console.WriteLine("Class C:funtion show is called!");
+}
+}
+
+class Program{
+public static void Main(string[]args){
+ A obj=new C();
+	obj.display();//class:c funtion is called
+}
+}
+
+
+abstract class Employee{
+private string emp_name;
+private int emp_id;
+private float salary;
+private project p;
+
+public Employee(){
+Console.WriteLine("Employee default contructor called!");
+this.emp_id=1;
+this.emp_name="";
+this.salary=0.0f;
+}
+public Employee(string name,int id,float sal){
+this.emp_name=name;
+this.emp_id=id;
+this.salary=sal;
+}
+public abstract void print();
+
+}
+public void show(){
+Console.WriteLine("Employee name is:"+emp_name+"Employee id:"+emp_id+"Salary:"+salary);
+}
+
+
+class Manager:Employee{
+public override void print(){
+Console.WriteLine("Abstruct class implemented");
+}
+}
